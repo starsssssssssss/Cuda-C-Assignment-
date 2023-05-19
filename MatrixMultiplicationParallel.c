@@ -4,7 +4,7 @@
 #include <cuda.h>
 #include <time.h>
 
-#define BLOCK_SIZE 1024
+#define BLOCK_SIZE 32
 
 __global__ void matrixMultiplication(float* matrixA, float* matrixB, float* matrixC, int rowsA, int colsA, int colsB) {
     int row = threadIdx.x + blockIdx.x * blockDim.x;
