@@ -3,7 +3,7 @@
 #include <cuda.h>
 #include <time.h>
 
-#define BLOCK_SIZE 1024
+#define BLOCK_SIZE 32
 #define TILE_SIZE 4
 
 __global__ void matrixMultiplication(float *A, float *B, float *C, int r1, int c1, int c2) {
